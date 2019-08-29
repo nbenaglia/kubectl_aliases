@@ -1,0 +1,32 @@
+# Original from https://github.com/ahmetb/kubectl-aliases
+# 
+# Add to .zshrc or .bashrc:
+# 
+# [ -f ~/.kubectl_aliases ] && source ~/.kubectl_aliases
+#
+
+alias k='kubectl'
+alias kb='kubectl'
+alias ka='kubectl apply --recursive -f'
+alias klo='kubectl logs -f'
+alias klop='kubectl logs -f -p'
+alias kp='kubectl proxy'
+alias kg='kubectl get'
+alias kd='kubectl describe'
+alias krm='kubectl delete'
+alias krun='kubectl run --rm --restart=Never --image-pull-policy=IfNotPresent -i -t'
+alias kgpo='kubectl get pods'
+alias kdpo='kubectl describe pods'
+alias krmpo='kubectl delete pods'
+alias kgdep='kubectl get deployment'
+alias kddep='kubectl describe deployment'
+alias krmdep='kubectl delete deployment'
+alias kgsvc='kubectl get service'
+alias kdsvc='kubectl describe service'
+alias krmsvc='kubectl delete service'
+alias kgno='kubectl get nodes'
+alias kdno='kubectl describe nodes'
+alias kgns='kubectl get namespaces'
+alias kdns='kubectl describe namespaces'
+alias krmns='kubectl delete namespaces'
+alias kgpores='kubectl get pod -o=custom-columns=NAME:.metadata.name,PHASE:.status.phase,CPU-REQUEST:.spec.containers[*].resources.requests.cpu,CPU-LIMIT:.spec.containers[*].resources.limits.cpu,MEMORY-REQUEST:.spec.containers[*].resources.requests.memory,MEMORY-LIMIT:.spec.containers[*].resources.limits.memory'
